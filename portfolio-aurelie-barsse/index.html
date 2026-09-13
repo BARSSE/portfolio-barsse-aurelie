@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurélie Barsse — BTS SIO SISR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head> -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurélie Barsse — BTS SIO SISR</title>
+<meta name="description" content="Portfolio d'Aurélie Barsse, étudiante en 2ᵉ année de BTS SIO option SISR (Solutions Infrastructures, Systèmes et Réseaux). Projets réseau et virtualisation Proxmox, compétences en administration systèmes, veille sur la cryptographie post-quantique, expérience professionnelle, CV et certifications téléchargeables.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div style="display:flex; align-items:center; gap:12px;">
+    <div class="dots"><span></span><span></span><span></span></div>
+    <span class="path">aurelie@bts-sisr:<b>~/portfolio</b>$</span>
+  </div>
+  <div class="menu-wrap">
+    <button class="menu-btn" id="menuBtn" aria-haspopup="true" aria-expanded="false">menu --sections</button>
+    <nav class="dropdown" id="dropdownMenu" aria-label="Navigation principale">
+      <a href="#accueil"><span class="idx">00</span> accueil</a>
+      <a href="#presentation"><span class="idx">01</span> présentation</a>
+      <a href="#projets"><span class="idx">02</span> projets</a>
+      <a href="#competences"><span class="idx">03</span> compétences (1A / 2A)</a>
+      <a href="#experience"><span class="idx">04</span> expérience professionnelle</a>
+      <a href="#veille"><span class="idx">05</span> veille technologique — PQC</a>
+      <a href="#sisr"><span class="idx">06</span> compétences SISR</a>
+      <a href="#certifications"><span class="idx">07</span> certifications</a>
+      <a href="#contact"><span class="idx">08</span> contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO / ACCUEIL ============ -->
+<section id="accueil" class="hero" style="padding-top:0;">
+  <div class="terminal-card">
+    <div class="bar">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <span>bash — 80x24</span>
+    </div>
+    <div class="body">
+      <div class="line"><span class="prompt-user">aurelie@bts-sisr</span><span class="prompt">:~$</span> <span class="cmd">whoami</span></div>
+      <div class="out-name">Aurélie Barsse<span class="cursor"></span></div>
+      <div class="out-role">Étudiante en deuxième année de BTS Services Informatiques aux Organisations<br>spécialité Solutions Infrastructures, Systèmes et Réseaux (SISR)</div>
+      <div class="line"><span class="prompt-user">aurelie@bts-sisr</span><span class="prompt">:~$</span> <span class="cmd">./voir_le_profil.sh</span></div>
+      <div style="margin-top:18px; display:flex; gap:14px; flex-wrap:wrap;">
+        <a class="btn" href="#presentation">cat presentation.md</a>
+        <a class="btn alt" href="#contact">mail --contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">▾ Scroller ou utilisez le menu en haut à droite pour naviguer.</div>
+</section>
+
+<main>
+
+  <!-- ============ PRÉSENTATION ============ -->
+  <section id="presentation">
+    <h2 class="title"><span class="n">01_</span>PRÉSENTATION</h2>
+    <div class="pane">
+      <div class="bar"><span class="prompt-user">aurelie@bts-sisr</span><span class="prompt">:~$</span> cat presentation.md</div>
+      <div class="content">
+        <h3 class="big">Qui suis-je ?</h3>
+        <p>
+          Je m'appelle Aurélie Barsse, actuellement en 2ᵉ année de BTS SIO,
+          option Solutions Infrastructures, Systèmes et Réseaux. Je m'intéresse
+          particulièrement à l'administration système et réseau : configuration
+          de serveurs, sécurisation des infrastructures, virtualisation et
+          automatisation via des scripts (bash, PowerShell).
+        </p>
+        <p>
+          <!-- Texte de présentation à personnaliser : parcours, motivations, ce que tu recherches (alternance, stage, poste). -->
+          Curieuse et rigoureuse, j'aime comprendre le fonctionnement d'une
+          infrastructure de bout en bout — du câblage à la couche applicative —
+          et je construis mes compétences autour de la fiabilité et de la
+          sécurité des systèmes.
+        </p>
+        <div style="margin-top:20px;">
+          <a class="btn" href="CV-Aurelie-Barsse.pdf" target="_blank" rel="noopener">télécharger --cv</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJETS ============ -->
+  <section id="projets">
+    <h2 class="title"><span class="n">02_</span>PROJETS</h2>
+    <div class="pane">
+      <div class="bar"><span class="prompt-user">aurelie@bts-sisr</span><b>:~$</b> ls -la projets/</div>
+      <div class="content">
+        <div class="subsection" id="projets-1a">
+          <span class="prompt-user">aurelie@bts-sisr</span><b>~$</b><div class="sub-head">projets/premiere-annee</div>
+          <div class="cards">
+            <div class="card">
+              <div class="card-head"><span class="name">ANASANG — Analyse d'un système existant</span><span class="tag">1A</span></div>
+              <p>Audit du parc informatique du laboratoire ANASANG (serveurs, postes clients, commutateur, pare-feu, NAS), préconisations de renouvellement matériel/logiciel et définition de l'adressage réseau. Projet réalisé en équipe de 3.</p>
+              <div style="margin-top:12px;">
+                <a class="btn" href="projet-anasang-analyse.pdf" target="_blank" rel="noopener">voir --document</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-head"><span class="name">Virtualisation Proxmox — Étude de faisabilité</span><span class="tag">1A</span></div>
+              <p>Étude comparative des hyperviseurs de type 1 et type 2, analyse des prérequis matériels de Proxmox VE et validation de la faisabilité du projet de virtualisation pour ANASANG.</p>
+              <div style="margin-top:12px;">
+                <a class="btn" href="projet-proxmox-etude.pdf" target="_blank" rel="noopener">voir --document</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-head"><span class="name">Virtualisation Proxmox — Annexe technique</span><span class="tag">1A</span></div>
+              <p>Procédure pas à pas : création d'une clé bootable, installation de Proxmox VE et mise en place d'une première machine virtuelle.</p>
+              <div style="margin-top:12px;">
+                <a class="btn" href="projet-proxmox-annexe.pdf" target="_blank" rel="noopener">voir --document</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection" id="projets-2a">
+          <div class="sub-head">projets/deuxieme-annee</div>
+          <div class="cards">
+            <div class="card">
+              <div class="card-head"><span class="name">Projet 2A — à venir</span><span class="tag">2A</span></div>
+              <p>Projet à venir au cours de l'année.</p>
+            </div>
+            <div class="card">
+              <div class="card-head"><span class="name">Projet 2A — à venir</span><span class="tag">2A</span></div>
+              <p>Projet à venir au cours de l'année.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPÉTENCES 1A / 2A ============ -->
+  <section id="competences">
+    <h2 class="title"><span class="n">03_</span>COMPÉTENCES PAR ANNÉE</h2>
+    <div class="pane">
+      <div class="bar"><span class="prompt-user">aurelie@bts-sisr</span><b>:~$</b> ./competences --par-annee</div>
+      <div class="content">
+        <div class="subsection">
+          <div class="sub-head">competences/premiere-annee</div>
+          <div class="skill-grid">
+            <div class="skill">Adressage IP &amp; sous-réseaux (IPv4/IPv6)<div class="lvl"><i style="width:70%"></i></div></div>
+            <div class="skill">Câblage et équipements réseau (switch, routeur)<div class="lvl"><i style="width:65%"></i></div></div>
+            <div class="skill">Installation et administration Windows Server<div class="lvl"><i style="width:60%"></i></div></div>
+            <div class="skill">Bases de Linux (Debian/Ubuntu, lignes de commande)<div class="lvl"><i style="width:65%"></i></div></div>
+            <div class="skill">Virtualisation (VMware / VirtualBox / Hyper-V)<div class="lvl"><i style="width:60%"></i></div></div>
+            <div class="skill">Support et assistance aux utilisateurs<div class="lvl"><i style="width:75%"></i></div></div>
+            <div class="skill">Scripting de base (Bash, PowerShell)<div class="lvl"><i style="width:55%"></i></div></div>
+            <div class="skill">Sécurité informatique — notions fondamentales<div class="lvl"><i style="width:50%"></i></div></div>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <div class="sub-head">competences/deuxieme-annee</div>
+          <div class="skill-grid">
+            <div class="skill">Routage dynamique (OSPF, RIP) et VLAN avancés<div class="lvl"><i style="width:60%"></i></div></div>
+            <div class="skill">Pare-feu, VPN et sécurisation périmétrique<div class="lvl"><i style="width:55%"></i></div></div>
+            <div class="skill">Active Directory avancé (GPO, réplication)<div class="lvl"><i style="width:60%"></i></div></div>
+            <div class="skill">Scripting avancé (automatisation Bash / PowerShell)<div class="lvl"><i style="width:60%"></i></div></div>
+            <div class="skill">Supervision d'infrastructure (monitoring)<div class="lvl"><i style="width:50%"></i></div></div>
+            <div class="skill">Haute disponibilité &amp; tolérance de panne<div class="lvl"><i style="width:45%"></i></div></div>
+            <div class="skill">Durcissement système et cybersécurité<div class="lvl"><i style="width:55%"></i></div></div>
+            <div class="skill">Cloud et virtualisation avancée<div class="lvl"><i style="width:50%"></i></div></div>
+          </div>
+        </div>
+        <p style="margin-top:22px; font-size:12.5px; color:var(--text-dim);">
+          <!-- Les pourcentages sont indicatifs, ajuste-les selon ton niveau réel. -->
+          Niveaux indicatifs — utile pour savoir mon niveau, mais n'est pas une valeur sure.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPÉRIENCE PROFESSIONNELLE ============ -->
+  <section id="experience">
+    <h2 class="title"><span class="n">04_</span>EXPÉRIENCE PROFESSIONNELLE</h2>
+    <div class="pane">
+      <div class="bar"><span class="prompt-user">aurelie@bts-sisr</span><b>:~$</b> history | grep stage</div>
+      <div class="content">
+        <div class="timeline-exp">
+          <div>
+            <span class="dot"></span>
+            <h3 class="big" style="display:inline; font-size:18px;">Muvraline — Testeuse de solution &amp; rédactrice de guides utilisateurs</h3>
+            <p style="margin-top:8px;">
+              Du 18 mai au 26 juin 2026 · Entreprise française spécialisée en intelligence
+              artificielle. Test et validation d'une application de gestion de projet
+              (web et mobile), rédaction et mise à jour de guides utilisateurs sur les
+              agents IA et les modèles d'images, participation à des réunions de suivi
+              avec l'équipe et un client externe (EPML). Certification RGPD réalisée
+              auprès de la CNIL.
+            </p>
+          </div>
+        </div>
+        <div style="margin-top:20px;">
+          <a class="btn" href="rapport-stage.pdf" target="_blank" rel="noopener">ouvrir --compte-rendu-stage</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VEILLE TECHNOLOGIQUE — PQC ============ -->
+  <section id="veille">
+    <h2 class="title"><span class="n">05_</span>VEILLE TECHNOLOGIQUE</h2>
+    <div class="pane">
+      <div class="bar"><span class="prompt-user">aurelie@bts-sisr</span><b>:~$</b> tail -f flux_pqc.rss</div>
+      <div class="content">
+        <h3 class="big">Cryptographie post-quantique (PQC)</h3>
+        <p>
+          Ma veille technologique porte sur la cryptographie post-quantique :
+          les algorithmes conçus pour résister aux capacités de calcul des
+          futurs ordinateurs quantiques, et leur adoption progressive dans les
+          infrastructures réseau et systèmes.
+        </p>
+
+        <div class="sisr-list" style="margin-top:20px;">
+          <div class="sisr-item">
+            <span class="code">date_existence</span>
+            <span class="desc">Concept théorique né au début des années 2000, après l'algorithme de Shor (1994). Transition industrielle amorcée en 2016 avec le processus de standardisation du NIST, aboutissant en août 2024 aux premiers standards officiels (FIPS 203, 204 et 205).</span>
+          </div>
+          <div class="sisr-item">
+            <span class="code">domaine_activite</span>
+            <span class="desc">Cybersécurité, télécommunications, secteur bancaire, défense et cloud. Objectif : remplacer RSA et ECC pour sécuriser les échanges VPN/TLS, la signature de documents, l'authentification et le chiffrement des données stockées.</span>
+          </div>
+          <div class="sisr-item">
+            <span class="code">descriptif_techno</span>
+            <span class="desc">Algorithmes mathématiques — principalement basés sur les réseaux euclidiens (ML-KEM/Kyber, ML-DSA/Dilithium) — reposant sur des problèmes trop complexes à résoudre en un temps raisonnable, même pour un ordinateur quantique.</span>
+          </div>
+          <div class="sisr-item">
+            <span class="code">interaction_systemes</span>
+            <span class="desc">S'intègre aux bibliothèques cryptographiques (OpenSSL, BoringSSL), aux protocoles réseau (TLS 1.3, IPsec, SSH) et aux certificats PKI.</span>
+          </div>
+          <div class="sisr-item">
+            <span class="code">interaction_materiel</span>
+            <span class="desc">Nécessite une mise à jour des cartes à puce, des HSM (Hardware Security Modules) et des processeurs pour supporter des clés et signatures nettement plus volumineuses.</span>
+          </div>
+          <div class="sisr-item">
+            <span class="code">interaction_humain</span>
+            <span class="desc">Transparente pour l'utilisateur final, mais requiert une montée en compétences des équipes SecOps/DevOps sur l'agilité cryptographique.</span>
+          </div>
+          <div class="sisr-item">
+            <span class="code">roadmap_2024-2026</span>
+            <span class="desc">Phase d'inventaire cryptographique et d'implémentation d'algorithmes hybrides (ex. RSA + ML-KEM).</span>
+          </div>
+          <div class="sisr-item">
+            <span class="code">roadmap_2026-2030</span>
+            <span class="desc">Dépréciation progressive des algorithmes asymétriques classiques et migration vers le « PQC pur ».</span>
+          </div>
+          <div class="sisr-item">
+            <span class="code">projection_court_terme</span>
+            <span class="desc">Adoption imposée par les régulateurs pour contrer la menace « Harvest Now, Decrypt Later » (interception de données chiffrées aujourd'hui, déchiffrées dès qu'un ordinateur quantique sera opérationnel).</span>
+          </div>
+          <div class="sisr-item">
+            <span class="code">projection_long_terme</span>
+            <span class="desc">Intégration native dans la quasi-totalité des systèmes informatiques mondiaux d'ici 2033-2035.</span>
+          </div>
+          <div class="sisr-item">
+            <span class="code">maintenance_communautaire</span>
+            <span class="desc">Standardisation ouverte (NIST, IETF, ISO) et projets open source, notamment Open Quantum Safe (liboqs).</span>
+          </div>
+          <div class="sisr-item">
+            <span class="code">maintenance_entreprise</span>
+            <span class="desc">Éditeurs majeurs (IBM, Cloudflare, Microsoft, Thales, Red Hat) intégrant ces algorithmes dans leurs suites logicielles avec support entreprise.</span>
+          </div>
+        </div>
+
+        <p style="font-size:12.5px; color:var(--text-dim); margin-top:20px;">
+          Sources suivies : ANSSI, Cloudflare, NIST (CSRC) et IBM.
+        </p>
+        <div id="rssContainer" class="rss-list" style="margin-top:20px;">
+          <div class="rss-loading">$ chargement des flux RSS...</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPÉTENCES SISR ============ -->
+  <section id="sisr">
+    <h2 class="title"><span class="n">06_</span>COMPÉTENCES SISR</h2>
+    <div class="pane">
+      <div class="bar"><span class="prompt-user">aurelie@bts-sisr</span><b>:~$</b> ls -la /referentiel/sisr</div>
+      <div class="content">
+        <p style="margin-bottom:20px;">Les quatre blocs de compétences du référentiel SISR :</p>
+        <div class="sisr-list">
+          <div class="sisr-item">
+            <span class="code">bloc_01/</span>
+            <span class="desc">Concevoir et maintenir une solution d'infrastructure réseau (architecture, dimensionnement, déploiement d'équipements et de services).</span>
+          </div>
+          <div class="sisr-item">
+            <span class="code">bloc_02/</span>
+            <span class="desc">Répondre aux incidents et demandes d'assistance liés à l'infrastructure (diagnostic, résolution, documentation).</span>
+          </div>
+          <div class="sisr-item">
+            <span class="code">bloc_03/</span>
+            <span class="desc">Réaliser la mise en production de services (installation, configuration, tests, mise en exploitation).</span>
+          </div>
+          <div class="sisr-item">
+            <span class="code">bloc_04/</span>
+            <span class="desc">Améliorer la disponibilité, la fiabilité et la sécurité d'un service (supervision, sauvegarde, plan de reprise).</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section id="certifications">
+    <h2 class="title"><span class="n">07_</span>CERTIFICATIONS</h2>
+    <div class="pane">
+      <div class="bar"><span class="prompt-user">aurelie@bts-sisr</span><b>~$</b> cat certifications.pdf</div>
+      <div class="content">
+        <p>
+          <!-- Liste ici tes certifications obtenues ou en cours (ex : PIX, TOSA, Cisco CCNA, etc.). -->
+          Retrouvez l'ensemble de mes certifications et attestations dans le
+          document ci-dessous.
+        </p>
+        <div style="margin-top:18px;">
+          <a class="btn" href="404.html" target="_blank" rel="noopener">ouvrir --certifications.pdf</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <h2 class="title"><span class="n">08_</span>CONTACT</h2>
+    <div class="pane">
+      <div class="bar"><span class="prompt-user">aurelie@bts-sisr</span><b>:~$</b> mail --compose</div>
+      <div class="content">
+        <p style="margin-bottom:20px;">Une question, une opportunité de stage ou d'alternance ? Écrivez-moi.</p>
+        <form class="contact" id="contactForm">
+          <div class="field">
+            <label for="nom">nom</label>
+            <input type="text" id="nom" name="nom" required>
+          </div>
+          <div class="field">
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="message">message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">envoyer --message</button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span class="prompt-user">aurelie@bts-sisr</span><span class="prompt"> ~$</span> exit code 0
+  Merci de votre visite. 
+  Copyright 2026 © Aurélie Barsse · BTS SIO SISR
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

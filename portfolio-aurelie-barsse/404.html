@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Page introuvable | Aurélie Barsse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<header class="topbar">
+  <div style="display:flex; align-items:center; gap:12px;">
+    <div class="dots"><span></span><span></span><span></span></div>
+    <span class="path">aurelie@bts-sisr:<b>~/portfolio</b>$</span>
+  </div>
+  <div class="menu-wrap">
+    <button class="menu-btn" id="menuBtn" aria-haspopup="true" aria-expanded="false">menu --sections</button>
+    <nav class="dropdown" id="dropdownMenu" aria-label="Navigation principale">
+      <a href="index.html#accueil"><span class="idx">00</span> accueil</a>
+      <a href="index.html#presentation"><span class="idx">01</span> présentation</a>
+      <a href="index.html#projets"><span class="idx">02</span> projets</a>
+      <a href="index.html#competences"><span class="idx">03</span> compétences (1A / 2A)</a>
+      <a href="index.html#experience"><span class="idx">04</span> expérience professionnelle</a>
+      <a href="index.html#veille"><span class="idx">05</span> veille technologique — PQC</a>
+      <a href="index.html#sisr"><span class="idx">06</span> compétences SISR</a>
+      <a href="index.html#certifications"><span class="idx">07</span> certifications</a>
+      <a href="index.html#contact"><span class="idx">08</span> contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding-top:0;">
+  <div class="terminal-card">
+    <div class="bar">
+      <div class="dots"><span></span><span></span><span></span></div>
+      <span>bash — erreur</span>
+    </div>
+    <div class="body">
+      <div class="line"><span class="prompt-user">aurelie@bts-sisr</span><span class="prompt">:~$</span> <span class="cmd">cd /page-demandee</span></div>
+      <div class="line" style="color:#FF6B6B;">bash: cd: /page-demandee : Aucun fichier ou dossier de ce type</div>
+
+      <div class="out-name" style="font-size:64px; letter-spacing:.04em; margin-top:24px;">404 ERROR<span class="cursor"></span></div>
+      <div class="out-role">Page introuvable pour différantes raisons:<br>
+        - cette route n'existe pas sur le serveur<br>
+        - cette page n'existe pas<br>
+        - le lien est cassé.<br>
+      </div>
+
+      <div class="line" style="margin-top:18px;"><span class="prompt-user">aurelie@bts-sisr</span><span class="prompt">:~$</span> <span class="cmd">./retour_accueil.sh</span></div>
+      <div style="margin-top:18px; display:flex; gap:14px; flex-wrap:wrap;">
+        <a class="btn" href="index.html">cd ~ --accueil</a>
+        <a class="btn alt" href="index.html#contact">mail --signaler-le-lien-casse</a>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="scroll-hint">exit code 1 — Ari Stophane · BTS SIO SISR</div> -->
+</section>
+</main>
+<footer>
+  <span class="prompt-user">aurelie@bts-sisr</span><span class="prompt"> ~$</span> exit code 1
+  Copyright 2026 © Aurélie Barsse · BTS SIO SISR
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
